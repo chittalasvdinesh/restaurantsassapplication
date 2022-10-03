@@ -1,0 +1,157 @@
+@import 'base';
+@import 'variables';
+
+
+.header {
+    background-image: url("../Images/Header-bg.png");
+    width: 100%;
+    background-size: cover;
+
+    .navbar {
+
+        padding: 20px;
+        align-items: baseline;
+        margin-bottom: 100px;
+
+        @include flexLayout;
+
+        .brand {
+
+            @include flexLayout;
+            align-items: baseline;
+
+            .nav-title {
+                padding-left: 10px;
+                color: $text-light;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+
+            li {
+                display: inline-block;
+
+                // padding: 0px 10px;
+                &:not(last-child) {
+                    padding: 0px 10px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $text-light;
+                    font-size: 24px;
+                    position: relative;
+
+                    &::after {
+                       @include hoverBottomLineEffect;
+
+                    }
+                    &:hover{
+                       color:#ff7000
+                    }
+                    &:hover::after{
+                       @include hoverScale;
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+
+    .banner {
+        text-align: center;
+        color: $text-light;
+
+        .banner-text-container {
+            @include flexLayoutBaseLine;
+
+            .banner-text-heading {
+                padding-left: 10px;
+                font-size: 44px;
+            }
+
+        }
+
+        .banner-text-para {
+            font-size: 36px;
+            padding: 50px 0px;
+        }
+
+    }
+
+
+}
+
+.main{
+   
+    .ourfood-section{
+        // background-color: $food-section-color;
+       width: 95%;
+       margin: 200px 0px;
+        @include flexLayout;
+        .ourfood-image{
+            // object-fit: contain;
+            width: 50% !important;
+        }
+        .our-food-categories{
+            .our-food-title{
+                font-size: 41px;
+                padding-bottom: 20px;
+                position: relative;
+                &::after{
+                    @include hoverBottomLineEffect;
+                }
+                &:hover{
+                    color: #ff7000;
+                }
+                &:hover::after{
+                    @include hoverScale;
+                }
+                
+            }
+            .our-food-categories-container{
+                .our-food-categories-list{
+                    @include flexLayoutBaseLine;
+                    background-color: lightpink;
+                    border: 1px solid orange;
+                    border-radius: 15px;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                   
+                 }
+                
+
+            }
+            
+            
+        }
+    }
+
+    .plans-section{
+        background-color: #ff7000;
+        text-align: center;
+        padding: 40px 60px;
+        .plans-card-container{
+            @include flexLayout;
+            .plan1{
+                @include planCard($bg-image-1);
+                @include flexLayoutEnd;
+                .plan-title{
+                    color: $text-light;
+                }
+            }
+            .plan2{
+                @include planCard($bg-image-2);
+                @include flexLayoutEnd;
+            }
+
+        }
+       
+        
+    }
+}

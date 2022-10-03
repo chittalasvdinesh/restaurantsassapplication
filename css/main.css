@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+.header {
+  background-image: url("../Images/Header-bg.png");
+  width: 100%;
+  background-size: cover; }
+  .header .navbar {
+    padding: 20px;
+    align-items: baseline;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between; }
+    .header .navbar .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline; }
+      .header .navbar .brand .nav-title {
+        padding-left: 10px;
+        color: white; }
+    .header .navbar ul {
+      list-style: none; }
+      .header .navbar ul li {
+        display: inline-block; }
+        .header .navbar ul li:not(last-child) {
+          padding: 0px 10px; }
+        .header .navbar ul li a {
+          text-decoration: none;
+          color: white;
+          font-size: 24px;
+          position: relative; }
+          .header .navbar ul li a::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            background: #ff7000;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right; }
+          .header .navbar ul li a:hover {
+            color: #ff7000; }
+          .header .navbar ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left; }
+  .header .banner {
+    text-align: center;
+    color: white; }
+    .header .banner .banner-text-container {
+      display: flex;
+      align-items: baseline;
+      justify-content: center; }
+      .header .banner .banner-text-container .banner-text-heading {
+        padding-left: 10px;
+        font-size: 44px; }
+    .header .banner .banner-text-para {
+      font-size: 36px;
+      padding: 50px 0px; }
+
+.main .ourfood-section {
+  width: 95%;
+  margin: 200px 0px;
+  display: flex;
+  justify-content: space-between; }
+  .main .ourfood-section .ourfood-image {
+    width: 50% !important; }
+  .main .ourfood-section .our-food-categories .our-food-title {
+    font-size: 41px;
+    padding-bottom: 20px;
+    position: relative; }
+    .main .ourfood-section .our-food-categories .our-food-title::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      top: 100%;
+      left: 0;
+      background: #ff7000;
+      transition: transform 0.5s;
+      transform: scaleX(0);
+      transform-origin: right; }
+    .main .ourfood-section .our-food-categories .our-food-title:hover {
+      color: #ff7000; }
+    .main .ourfood-section .our-food-categories .our-food-title:hover::after {
+      transform: scaleX(1);
+      transform-origin: left; }
+  .main .ourfood-section .our-food-categories .our-food-categories-container .our-food-categories-list {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: lightpink;
+    border: 1px solid orange;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px; }
+
+.main .plans-section {
+  background-color: #ff7000;
+  text-align: center;
+  padding: 40px 60px; }
+  .main .plans-section .plans-card-container {
+    display: flex;
+    justify-content: space-between; }
+    .main .plans-section .plans-card-container .plan1 {
+      padding: 20px;
+      background-image: url("../Images/pizza1.png");
+      background-size: cover;
+      width: 40%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end; }
+      .main .plans-section .plans-card-container .plan1 .plan-title {
+        color: white; }
+    .main .plans-section .plans-card-container .plan2 {
+      padding: 20px;
+      background-image: url("../Images/pizza2.png");
+      background-size: cover;
+      width: 40%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
