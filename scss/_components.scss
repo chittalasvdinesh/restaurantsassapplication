@@ -9,20 +9,28 @@
 
     .navbar {
 
-        padding: 20px;
+        padding: $font-medium;
         align-items: baseline;
         margin-bottom: 100px;
 
         @include flexLayout;
+        
 
         .brand {
 
             @include flexLayout;
             align-items: baseline;
 
+            .logo{
+                @include anchorHover;
+            }
+
             .nav-title {
-                padding-left: 10px;
+                padding-left: $font-small;
                 color: $text-light;
+                &:hover{
+                    color: $primary-color;
+                }
             }
         }
 
@@ -39,27 +47,17 @@
                 }
 
                 a {
-                    text-decoration: none;
-                    color: $text-light;
-                    font-size: 24px;
-                    position: relative;
-
-                    &::after {
-                       @include hoverBottomLineEffect;
-
-                    }
-                    &:hover{
-                       color:#ff7000
-                    }
-                    &:hover::after{
-                       @include hoverScale;
-                    }
+                    @include hoverLinks(24px);
                 }
 
             }
 
         }
-
+        .search-bar{
+            padding: $font-small;
+            border-radius: 15px;
+            border: $font-none;
+        }
 
     }
 
@@ -69,17 +67,17 @@
 
         .banner-text-container {
             @include flexLayoutBaseLine;
-
+            
             .banner-text-heading {
-                padding-left: 10px;
-                font-size: 44px;
+                padding-left: $font-small;
+                font-size: $font-large;
             }
 
         }
 
         .banner-text-para {
-            font-size: 36px;
-            padding: 50px 0px;
+            font-size: $font-medium;
+            padding: $font-fity $font-none;
         }
 
     }
@@ -92,7 +90,7 @@
     .ourfood-section{
         // background-color: $food-section-color;
        width: 95%;
-       margin: 200px 0px;
+       margin: $font-db-hundred $font-none;
         @include flexLayout;
         .ourfood-image{
             // object-fit: contain;
@@ -100,14 +98,14 @@
         }
         .our-food-categories{
             .our-food-title{
-                font-size: 41px;
-                padding-bottom: 20px;
+                font-size: $font-large;
+                // padding-bottom: 20px;
                 position: relative;
                 &::after{
                     @include hoverBottomLineEffect;
                 }
                 &:hover{
-                    color: #ff7000;
+                    color: $primary-color;
                 }
                 &:hover::after{
                     @include hoverScale;
@@ -115,15 +113,20 @@
                 
             }
             .our-food-categories-container{
+                margin-top: $font-medium;
                 .our-food-categories-list{
                     @include flexLayoutBaseLine;
-                    background-color: lightpink;
-                    border: 1px solid orange;
-                    border-radius: 15px;
-                    padding: 10px;
-                    margin-bottom: 10px;
+                    background-color: $secondary-color;
+                    border: 1px solid $primary-color;
+                    border-radius: $font-small-medium;
+                    padding: $font-small;
+                    margin-bottom: $font-small;
+                    &:hover{
+                        background-color: $teritary-color;
+                    }
                    
                  }
+                 
                 
 
             }
@@ -133,25 +136,95 @@
     }
 
     .plans-section{
-        background-color: #ff7000;
+        background-color: $primary-color;
         text-align: center;
-        padding: 40px 60px;
+       padding-bottom: $font-fity;
+        .plan-head{
+            color: $text-light;
+            font-size: $font-large;
+
+        }
         .plans-card-container{
             @include flexLayout;
+            color: $text-light;
             .plan1{
                 @include planCard($bg-image-1);
                 @include flexLayoutEnd;
                 .plan-title{
-                    color: $text-light;
+                   
+                    font-size: $font-medium;
+                    span{
+                        font-size: $font-large;
+                        color:$primary-color;
+                    }
                 }
             }
             .plan2{
                 @include planCard($bg-image-2);
                 @include flexLayoutEnd;
+                .plan-title{
+                    color:$primary-color;
+                    font-size: $font-large;
+                }
             }
 
         }
        
         
+    }
+}
+
+.footer{
+    background: url('../Images/footerbg.png');
+    background-size: cover;
+    background-color: black;
+    color: $text-light;
+    padding-top: $font-large;
+    // padding: 5px;
+    .contactus-section{
+        padding: $font-medium;
+       
+        @include flexLayout;
+        address{
+            font-style: normal !important ;
+            padding: $font-base;
+           h4{
+            padding-bottom: $font-small;
+           }
+           span{
+            a{
+               @include anchorHover;
+            }
+           }
+            
+        }
+        ul{
+            list-style: none;
+            
+            li {
+              
+                // padding: 0px 10px;
+                &:not(last-child) {
+                    padding: $font-base $font-none;
+                }
+
+                a {
+                    @include hoverLinks(18px);
+                }
+            }
+        }
+        .social-container{
+            padding-top: $font-medium;
+          i{
+            margin-right: $font-base;
+            font-size: $font-medium;
+            &:hover{
+                color: $primary-color;
+            }
+          }
+        }
+    }
+    .copy-right-text{
+        padding: $font-small $font-medium;
     }
 }

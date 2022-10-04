@@ -36,7 +36,7 @@
     height: 3px;
     top: 100%;
     left: 0;
-    background: #ff7000;
+    background: $primary-color;
     transition: transform 0.5s;
     transform: scaleX(0);
     transform-origin: right;
@@ -48,6 +48,33 @@
     transform-origin: left;
 }
 
+@mixin hoverLinks($font-size){
+   
+        text-decoration: none;
+        color: $text-light;
+        font-size: $font-size;
+        position: relative;
+
+        &::after {
+           @include hoverBottomLineEffect;
+
+        }
+        &:hover{
+           color:$primary-color;
+        }
+        &:hover::after{
+           @include hoverScale;
+        }
+    }
+
+@mixin anchorHover {
+    
+        text-decoration: none;
+        color: $text-light;
+        &:hover{
+            color: $primary-color;
+        }
+}
 
 *{
     margin: 0;

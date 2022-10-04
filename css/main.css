@@ -19,9 +19,16 @@ html {
       display: flex;
       justify-content: space-between;
       align-items: baseline; }
+      .header .navbar .brand .logo {
+        text-decoration: none;
+        color: white; }
+        .header .navbar .brand .logo:hover {
+          color: #ff7000; }
       .header .navbar .brand .nav-title {
         padding-left: 10px;
         color: white; }
+        .header .navbar .brand .nav-title:hover {
+          color: #ff7000; }
     .header .navbar ul {
       list-style: none; }
       .header .navbar ul li {
@@ -49,6 +56,10 @@ html {
           .header .navbar ul li a:hover::after {
             transform: scaleX(1);
             transform-origin: left; }
+    .header .navbar .search-bar {
+      padding: 10px;
+      border-radius: 15px;
+      border: 0px; }
   .header .banner {
     text-align: center;
     color: white; }
@@ -58,9 +69,9 @@ html {
       justify-content: center; }
       .header .banner .banner-text-container .banner-text-heading {
         padding-left: 10px;
-        font-size: 44px; }
+        font-size: 40px; }
     .header .banner .banner-text-para {
-      font-size: 36px;
+      font-size: 20px;
       padding: 50px 0px; }
 
 .main .ourfood-section {
@@ -71,8 +82,7 @@ html {
   .main .ourfood-section .ourfood-image {
     width: 50% !important; }
   .main .ourfood-section .our-food-categories .our-food-title {
-    font-size: 41px;
-    padding-bottom: 20px;
+    font-size: 40px;
     position: relative; }
     .main .ourfood-section .our-food-categories .our-food-title::after {
       position: absolute;
@@ -90,23 +100,31 @@ html {
     .main .ourfood-section .our-food-categories .our-food-title:hover::after {
       transform: scaleX(1);
       transform-origin: left; }
-  .main .ourfood-section .our-food-categories .our-food-categories-container .our-food-categories-list {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    background-color: lightpink;
-    border: 1px solid orange;
-    border-radius: 15px;
-    padding: 10px;
-    margin-bottom: 10px; }
+  .main .ourfood-section .our-food-categories .our-food-categories-container {
+    margin-top: 20px; }
+    .main .ourfood-section .our-food-categories .our-food-categories-container .our-food-categories-list {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      background-color: lightpink;
+      border: 1px solid #ff7000;
+      border-radius: 15px;
+      padding: 10px;
+      margin-bottom: 10px; }
+      .main .ourfood-section .our-food-categories .our-food-categories-container .our-food-categories-list:hover {
+        background-color: aqua; }
 
 .main .plans-section {
   background-color: #ff7000;
   text-align: center;
-  padding: 40px 60px; }
+  padding-bottom: 50px; }
+  .main .plans-section .plan-head {
+    color: white;
+    font-size: 40px; }
   .main .plans-section .plans-card-container {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    color: white; }
     .main .plans-section .plans-card-container .plan1 {
       padding: 20px;
       background-image: url("../Images/pizza1.png");
@@ -118,7 +136,10 @@ html {
       align-items: flex-end;
       justify-content: flex-end; }
       .main .plans-section .plans-card-container .plan1 .plan-title {
-        color: white; }
+        font-size: 20px; }
+        .main .plans-section .plans-card-container .plan1 .plan-title span {
+          font-size: 40px;
+          color: #ff7000; }
     .main .plans-section .plans-card-container .plan2 {
       padding: 20px;
       background-image: url("../Images/pizza2.png");
@@ -129,6 +150,64 @@ html {
       flex-direction: column;
       align-items: flex-end;
       justify-content: flex-end; }
+      .main .plans-section .plans-card-container .plan2 .plan-title {
+        color: #ff7000;
+        font-size: 40px; }
+
+.footer {
+  background: url("../Images/footerbg.png");
+  background-size: cover;
+  background-color: black;
+  color: white;
+  padding-top: 40px; }
+  .footer .contactus-section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; }
+    .footer .contactus-section address {
+      font-style: normal !important;
+      padding: 5px; }
+      .footer .contactus-section address h4 {
+        padding-bottom: 10px; }
+      .footer .contactus-section address span a {
+        text-decoration: none;
+        color: white; }
+        .footer .contactus-section address span a:hover {
+          color: #ff7000; }
+    .footer .contactus-section ul {
+      list-style: none; }
+      .footer .contactus-section ul li:not(last-child) {
+        padding: 5px 0px; }
+      .footer .contactus-section ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        position: relative; }
+        .footer .contactus-section ul li a::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 3px;
+          top: 100%;
+          left: 0;
+          background: #ff7000;
+          transition: transform 0.5s;
+          transform: scaleX(0);
+          transform-origin: right; }
+        .footer .contactus-section ul li a:hover {
+          color: #ff7000; }
+        .footer .contactus-section ul li a:hover::after {
+          transform: scaleX(1);
+          transform-origin: left; }
+    .footer .contactus-section .social-container {
+      padding-top: 20px; }
+      .footer .contactus-section .social-container i {
+        margin-right: 5px;
+        font-size: 20px; }
+        .footer .contactus-section .social-container i:hover {
+          color: #ff7000; }
+  .footer .copy-right-text {
+    padding: 10px 20px; }
 
 * {
   margin: 0;
