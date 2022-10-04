@@ -1,7 +1,7 @@
 @import 'base';
 @import 'variables';
 
-
+// header section
 .header {
     background-image: url("../Images/Header-bg.png");
     width: 100%;
@@ -14,21 +14,22 @@
         margin-bottom: 100px;
 
         @include flexLayout;
-        
+
 
         .brand {
 
             @include flexLayout;
             align-items: baseline;
 
-            .logo{
+            .logo {
                 @include anchorHover;
             }
 
             .nav-title {
                 padding-left: $font-small;
                 color: $text-light;
-                &:hover{
+
+                &:hover {
                     color: $primary-color;
                 }
             }
@@ -53,7 +54,8 @@
             }
 
         }
-        .search-bar{
+
+        .search-bar {
             padding: $font-small;
             border-radius: 15px;
             border: $font-none;
@@ -67,7 +69,7 @@
 
         .banner-text-container {
             @include flexLayoutBaseLine;
-            
+
             .banner-text-heading {
                 padding-left: $font-small;
                 font-size: $font-large;
@@ -85,126 +87,150 @@
 
 }
 
-.main{
-   
-    .ourfood-section{
+//main section
+
+.main {
+
+    .ourfood-section {
         // background-color: $food-section-color;
-    //    width: 90%;
-       margin: $font-db-hundred $font-none;
-    //    padding: $font-large;
+        //    width: 90%;
+        margin: $font-db-hundred $font-none;
+        //    padding: $font-large;
         @include flexLayoutAround;
-        .ourfood-image{
+
+        .ourfood-image {
             // object-fit: contain;
             width: 50% !important;
         }
-        .our-food-categories{
-            .our-food-title{
+
+        .our-food-categories {
+            .our-food-title {
                 font-size: $font-large;
                 // padding-bottom: 20px;
                 position: relative;
-                &::after{
+
+                &::after {
                     @include hoverBottomLineEffect;
                 }
-                &:hover{
+
+                &:hover {
                     color: $primary-color;
                 }
-                &:hover::after{
+
+                &:hover::after {
                     @include hoverScale;
                 }
-                
+
             }
-            .our-food-categories-container{
+
+            .our-food-categories-container {
                 margin-top: $font-medium;
-                .our-food-categories-list{
+
+                .our-food-categories-list {
                     @include flexLayoutBaseLine;
                     background-color: $secondary-color;
                     border: 1px solid $primary-color;
                     border-radius: $font-small-medium;
                     padding: $font-small;
                     margin-bottom: $font-small;
-                    &:hover{
+
+                    &:hover {
                         background-color: $teritary-color;
                     }
-                   
-                 }
-                 
-                
+
+                }
+
+
 
             }
-            
-            
+
+
         }
     }
 
-    .plans-section{
+    .plans-section {
         background-color: $primary-color;
         text-align: center;
-       padding-bottom: $font-fity;
-        .plan-head{
+        padding-bottom: $font-fity;
+
+        .plan-head {
             color: $text-light;
             font-size: $font-large;
             padding: $font-fity;
 
         }
-        .plans-card-container{
+
+        .plans-card-container {
             @include flexLayoutAround;
             color: $text-light;
-            .plan1{
+
+            .plan1 {
                 @include planCard($bg-image-1);
                 @include flexLayoutEnd;
-                .plan-title{
-                   
+
+                .plan-title {
+
                     font-size: $font-medium;
-                    span{
+
+                    span {
                         font-size: $font-large;
-                        color:$primary-color;
+                        color: $primary-color;
                     }
                 }
             }
-            .plan2{
+
+            .plan2 {
                 @include planCard($bg-image-2);
                 @include flexLayoutEnd;
-                .plan-title{
-                    color:$primary-color;
+
+                .plan-title {
+                    color: $primary-color;
                     font-size: $font-large;
                 }
             }
 
         }
-       
-        
+
+
     }
 }
 
-.footer{
+//footer section
+
+.footer {
     background: url('../Images/footerbg.png');
     background-size: cover;
     background-color: black;
     color: $text-light;
     padding-top: $font-large;
+
     // padding: 5px;
-    .contactus-section{
+    .contactus-section {
         padding: $font-medium;
-       
+
         @include flexLayout;
-        address{
-            font-style: normal !important ;
+
+        address {
+            font-style: normal !important;
             padding: $font-base;
-           h4{
-            padding-bottom: $font-small;
-           }
-           span{
-            a{
-               @include anchorHover;
+
+            h4 {
+                padding-bottom: $font-small;
             }
-           }
-            
+
+            span {
+                a {
+                    @include anchorHover;
+                }
+            }
+
         }
-        ul{
+
+        ul {
             list-style: none;
-            
+
             li {
-              
+
                 // padding: 0px 10px;
                 &:not(last-child) {
                     padding: $font-base $font-none;
@@ -215,18 +241,22 @@
                 }
             }
         }
-        .social-container{
+
+        .social-container {
             padding-top: $font-medium;
-          i{
-            margin-right: $font-base;
-            font-size: $font-medium;
-            &:hover{
-                color: $primary-color;
+
+            i {
+                margin-right: $font-base;
+                font-size: $font-medium;
+
+                &:hover {
+                    color: $primary-color;
+                }
             }
-          }
         }
     }
-    .copy-right-text{
+
+    .copy-right-text {
         padding: $font-small $font-medium;
     }
 }
