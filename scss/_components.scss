@@ -89,9 +89,10 @@
    
     .ourfood-section{
         // background-color: $food-section-color;
-       width: 95%;
+    //    width: 90%;
        margin: $font-db-hundred $font-none;
-        @include flexLayout;
+    //    padding: $font-large;
+        @include flexLayoutAround;
         .ourfood-image{
             // object-fit: contain;
             width: 50% !important;
@@ -142,10 +143,11 @@
         .plan-head{
             color: $text-light;
             font-size: $font-large;
+            padding: $font-fity;
 
         }
         .plans-card-container{
-            @include flexLayout;
+            @include flexLayoutAround;
             color: $text-light;
             .plan1{
                 @include planCard($bg-image-1);

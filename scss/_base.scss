@@ -5,6 +5,11 @@
     justify-content: space-between;
     
 }
+@mixin flexLayoutAround {
+    display: flex;
+    justify-content: space-around;
+    
+}
 
 @mixin flexLayoutBaseLine {
     display: flex;
@@ -76,12 +81,5 @@
         }
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
 
-html {
-    scroll-behavior: smooth;
-  }
   

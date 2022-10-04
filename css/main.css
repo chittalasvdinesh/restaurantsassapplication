@@ -75,10 +75,9 @@ html {
       padding: 50px 0px; }
 
 .main .ourfood-section {
-  width: 95%;
   margin: 200px 0px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
   .main .ourfood-section .ourfood-image {
     width: 50% !important; }
   .main .ourfood-section .our-food-categories .our-food-title {
@@ -120,10 +119,11 @@ html {
   padding-bottom: 50px; }
   .main .plans-section .plan-head {
     color: white;
-    font-size: 40px; }
+    font-size: 40px;
+    padding: 50px; }
   .main .plans-section .plans-card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white; }
     .main .plans-section .plans-card-container .plan1 {
       padding: 20px;
@@ -208,10 +208,3 @@ html {
           color: #ff7000; }
   .footer .copy-right-text {
     padding: 10px 20px; }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-html {
-  scroll-behavior: smooth; }
